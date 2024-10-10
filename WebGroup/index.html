@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Tab Grouping</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Web Tab Grouping</h1>
+  <form id="groupForm">
+    <label for="domain">域名:</label>
+    <input type="text" id="domain" name="domain" required>
+    <label for="groupName">分组名称:</label>
+    <input type="text" id="groupName" name="groupName" required>
+    <label for="color">颜色:</label>
+    <select id="color" name="color">
+      <option value="grey">Grey</option>
+      <option value="blue">Blue</option>
+      <option value="red">Red</option>
+      <option value="yellow">Yellow</option>
+      <option value="green">Green</option>
+      <option value="pink">Pink</option>
+      <option value="purple">Purple</option>
+      <option value="cyan">Cyan</option>
+      <option value="orange">orange</option>
+    </select>
+    <button type="submit">保存</button>
+  </form>
+  <p id="status"></p>
+  <button id="showConfigButton" class="left-align">查看已设置的分组配置</button>
+
+  <!-- 弹框 -->
+  <div id="configModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>已设置的分组配置</h2>
+      <table id="configTable">
+        <thead>
+          <tr>
+            <th>域名</th>
+            <th>分组名称</th>
+            <th>颜色</th>
+          </tr>
+        </thead>
+        <tbody id="configList"></tbody>
+      </table>
+      <div id="pagination">
+        <button id="prevPage">上一页</button>
+        <span id="currentPage">1</span>
+        <button id="nextPage">下一页</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
