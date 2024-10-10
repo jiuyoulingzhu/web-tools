@@ -38,11 +38,4 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => { // 监听标签�
       }
     });
   }
-
-  if (changeInfo.status === 'complete' && !tab.url.startsWith('chrome://')) {
-    console.log(tab)
-    console.log(tabId)
-    console.log(tab.url)
-    console.log(tab.windowId)
-  }
 });
