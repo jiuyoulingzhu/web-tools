@@ -1,0 +1,19 @@
+> 首先，创建一个新的文件夹来存放扩展程序的所有文件[例如这里的WebGroup]。我们至少需要以下几个文件：
+
+1. 设置项目结构 
+    * manifest.json：扩展程序的元数据文件。
+    * index.html：用户点击扩展图标时显示的HTML页面。
+    * index.js：控制index.html行为的JavaScript文件
+    * background.js：处理后台逻辑的JavaScript文件。
+    * styles.css：样式css文件
+2. 编写`manifest.json`
+3. 创建`index.html`
+4. 编写`index.js`
+5. 编写`background.js`
+6. 编写`style.css`
+7. 测试扩展程序
+    * 打开Chrome浏览器，进入扩展程序页面（chrome://extensions/）。
+    * 启用“开发者模式”。
+    * 点击“加载已解压的扩展程序”，选择你的扩展程序文件夹。
+    * 点击扩展程序图标，测试是否能够正确设置分组规则。
+    * 打开一些符合设置规则的标签页，检查是否自动分组。
